@@ -1,0 +1,318 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body {
+  font-family: "Prosto One", serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+  background-color: #d7d8f5;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 73.125em) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 73.125em) {
+  @supports (font-size: clamp( 1rem , 0.8117647059rem  +  0.9411764706vw , 1.5rem )) {
+    body {
+      font-size: clamp( 1rem , 0.8117647059rem  +  0.9411764706vw , 1.5rem );
+    }
+  }
+  @supports not (font-size: clamp( 1rem , 0.8117647059rem  +  0.9411764706vw , 1.5rem )) {
+    body {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 53.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  margin-top: 85px;
+}
+
+.container-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 73.125rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+.container-main .hero-title {
+  color: #151212;
+}
+@media (min-width: 73.125em) {
+  .container-main .hero-title {
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 73.125em) {
+  @supports (margin-bottom: clamp( 2.5rem , 1.5588235294rem  +  4.7058823529vw , 5rem )) {
+    .container-main .hero-title {
+      margin-bottom: clamp( 2.5rem , 1.5588235294rem  +  4.7058823529vw , 5rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 2.5rem , 1.5588235294rem  +  4.7058823529vw , 5rem )) {
+    .container-main .hero-title {
+      margin-bottom: calc(2.5rem + 2.5 * (100vw - 20rem) / 53.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .container-main .hero-title {
+    margin-bottom: 2.5rem;
+  }
+}
+.container-main .list-largest-it-companies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+@media (min-width: 73.125em) {
+  .container-main .list-largest-it-companies {
+    gap: 1.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 73.125em) {
+  @supports (gap: clamp( 0.9375rem , 0.5845588235rem  +  1.7647058824vw , 1.875rem )) {
+    .container-main .list-largest-it-companies {
+      gap: clamp( 0.9375rem , 0.5845588235rem  +  1.7647058824vw , 1.875rem );
+    }
+  }
+  @supports not (gap: clamp( 0.9375rem , 0.5845588235rem  +  1.7647058824vw , 1.875rem )) {
+    .container-main .list-largest-it-companies {
+      gap: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 53.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .container-main .list-largest-it-companies {
+    gap: 0.9375rem;
+  }
+}
+.container-main .list-largest-it-companies .list-item-largest-it-companies {
+  position: relative;
+  cursor: pointer;
+}
+.container-main .list-largest-it-companies .largest-it-companiess-image {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.container-main .list-largest-it-companies .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.container-main .list-largest-it-companies .description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+@media (min-width: 73.125em) {
+  .container-main .list-largest-it-companies .description {
+    gap: 2.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 73.125em) {
+  @supports (gap: clamp( 1.25rem , 0.7794117647rem  +  2.3529411765vw , 2.5rem )) {
+    .container-main .list-largest-it-companies .description {
+      gap: clamp( 1.25rem , 0.7794117647rem  +  2.3529411765vw , 2.5rem );
+    }
+  }
+  @supports not (gap: clamp( 1.25rem , 0.7794117647rem  +  2.3529411765vw , 2.5rem )) {
+    .container-main .list-largest-it-companies .description {
+      gap: calc(1.25rem + 1.25 * (100vw - 20rem) / 53.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .container-main .list-largest-it-companies .description {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 73.125em) {
+  .container-main .list-largest-it-companies .description-title {
+    font-size: 3.75rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 73.125em) {
+  @supports (font-size: clamp( 1.875rem , 1.1691176471rem  +  3.5294117647vw , 3.75rem )) {
+    .container-main .list-largest-it-companies .description-title {
+      font-size: clamp( 1.875rem , 1.1691176471rem  +  3.5294117647vw , 3.75rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.875rem , 1.1691176471rem  +  3.5294117647vw , 3.75rem )) {
+    .container-main .list-largest-it-companies .description-title {
+      font-size: calc(1.875rem + 1.875 * (100vw - 20rem) / 53.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .container-main .list-largest-it-companies .description-title {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 73.125em) {
+  .container-main .list-largest-it-companies .description-text {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 73.125em) {
+  @supports (font-size: clamp( 1.25rem , 0.9676470588rem  +  1.4117647059vw , 2rem )) {
+    .container-main .list-largest-it-companies .description-text {
+      font-size: clamp( 1.25rem , 0.9676470588rem  +  1.4117647059vw , 2rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.25rem , 0.9676470588rem  +  1.4117647059vw , 2rem )) {
+    .container-main .list-largest-it-companies .description-text {
+      font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 53.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .container-main .list-largest-it-companies .description-text {
+    font-size: 1.25rem;
+  }
+}
+
+.list-item-largest-it-companies:hover .overlay {
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.list-item-largest-it-companies:hover .description {
+  opacity: 1;
+}
+.list-item-largest-it-companies:hover .largest-it-companiess-image {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media (max-width: 862px) {
+  .container-main .list-largest-it-companies {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

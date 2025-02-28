@@ -1,0 +1,104 @@
+@import "reset";
+@import "mixin";
+@import "variables";
+
+body {
+  @include body-styles;
+  width: 100%;
+  height: 100%;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+}
+.main {
+  margin-top: 85px;
+}
+.container-main {
+  display: flex;
+  flex-direction: column;
+  max-width: toRem($maxWidthContainer);
+  margin: 0 auto;
+  padding: 0 toRem($containerPadding);
+
+  .hero-title {
+    color: $blackPrimary;
+    @include adaptiveValue("margin-bottom", 80, 40);
+  }
+  .list-largest-it-companies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    @include adaptiveValue("gap", 30, 15);
+
+    .list-item-largest-it-companies {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .largest-it-companiess-image {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $blackSecondary;
+      opacity: 0;
+      transition: transform 0.3s ease;
+    }
+    .description {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-50%) translateY(-50%);
+      display: flex;
+      @include adaptiveValue("gap", 40, 20);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .description-title {
+      @include adaptiveValue("font-size", 60, 30);
+    }
+    .description-text {
+      @include adaptiveValue("font-size", 32, 20);
+    }
+  }
+}
+
+.list-item-largest-it-companies:hover {
+  .overlay {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  .description {
+    opacity: 1;
+  }
+
+  .largest-it-companiess-image {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 862px) {
+
+    .container-main {
+        .list-largest-it-companies {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          }
+    }
+
+}
