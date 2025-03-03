@@ -7,10 +7,10 @@ body {
   width: 100%;
   height: 100%;
 }
-img {
-  width: 100%;
-  height: 100%;
-}
+// img {
+//   width: 100%;
+//   height: 100%;
+// }
 
 .wrapper {
 }
@@ -26,12 +26,12 @@ img {
 
   .hero-title {
     color: $blackPrimary;
-    @include adaptiveValue("margin-bottom", 80, 40);
+    @include adaptiveValue("margin-bottom", 80, 20);
   }
   .list-largest-it-companies {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    @include adaptiveValue("gap", 30, 15);
+    @include adaptiveValue("gap", 30, 10);
 
     .list-item-largest-it-companies {
       position: relative;
@@ -62,19 +62,21 @@ img {
       height: 100%;
       transform: translateX(-50%) translateY(-50%);
       display: flex;
-      @include adaptiveValue("gap", 40, 20);
+      @include adaptiveValue("gap", 40, 10);
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
       opacity: 0;
       transition: opacity 0.3s ease;
+      padding: 0 15px;
     }
 
     .description-title {
-      @include adaptiveValue("font-size", 60, 30);
+      @include adaptiveValue("font-size", 60, 20);
     }
     .description-text {
-      @include adaptiveValue("font-size", 32, 20);
+      @include adaptiveValue("font-size", 32, 16);
     }
   }
 }
@@ -94,11 +96,55 @@ img {
 }
 
 @media (max-width: 862px) {
-
-    .container-main {
-        .list-largest-it-companies {
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          }
+  .container-main {
+    .list-largest-it-companies {
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     }
+  }
+}
 
+@media (max-width: 768px) {
+  .container-main {
+    .list-largest-it-companies {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      .overlay {
+        opacity: 1;
+      }
+      .description {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .container-main {
+    .list-largest-it-companies {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .hero-title {
+      text-align: center;
+    }
+    .description {
+      .description-title {
+        @include adaptiveValue("font-size", 30, 16);
+      }
+      .description-text {
+        @include adaptiveValue("font-size", 26, 10);
+      }
+    }
+  }
+}
+
+@media (max-width: 442px) {
+  .container-main {
+    .description {
+      .description-title {
+        font-size: 40px;
+      }
+      .description-text {
+        font-size: 24px;
+      }
+    }
+  }
 }
